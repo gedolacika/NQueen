@@ -172,6 +172,15 @@ namespace N_queen
             Console.WriteLine();
         }
 
+        public bool IsAttacked(int row, int col)
+        {
+            int mainDiagonal, subDiagonal;
+            mainDiagonal = CheckMainDiagonalCollisionNumber(row, col);
+            subDiagonal = CheckSubDiagonalCollisionNumber(row, col);
+            if (mainDiagonal >= 2 || subDiagonal >= 2) return true;
+            return false;
+        }
+
         public bool CheckQueenExists(int i, int j)
         {
             bool returnValue = false;

@@ -13,7 +13,7 @@ namespace N_queen
             Console.WriteLine();
             Console.WriteLine("Number of collisions on the main diagonal: " + queens.GetNumberOfCollisionsOnTheAllMainDiagonals());
             Console.WriteLine("Number of collisions on the sub diagonal: " + queens.GetNumberOfCollisionsOnTheAllSubDiagonals());
-            //for (int i = 0; i < N; ++i) Console.WriteLine(queens.CheckQueenExists(0, i) + " ");
+            for (int i = 0; i < N; ++i) Console.WriteLine(queens.IsAttacked(0,i) + " ");
         }
     }
 }
